@@ -49,8 +49,47 @@
         </section>
    </header>
     <main>
-        <!-- news display section -->
-        <section class="container">
+         <!-- <-- Modal section --> 
+       <section id="modal-container">
+           <div class="modal fade p-5 my-5"  id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                          <h6 class="modal-title fs-5 text-center" id="exampleModalLabel"></h6>
+                      </div>
+                        <div class="container">
+                          <img id="image" class="img-fluid" src="" alt="">
+                        </div>
+                        <div id="newsDetails" class="modal-body text-center">
+                        ...
+                        </div>
+                        <div class="modal-footer">
+                        <div id="author-div" class="pe-5 d-flex">
+                        <div class="d-flex me-5">
+                            <img id="author-image" src="" />
+                            <span><p id="author-name" class="text-primary"></p>
+                              <p id="para" class="text-primary"></p>
+                            </span>     
+                        </div>
+                        <div class="d-flex me-5">
+                            <span id="view-font" ><i class="fa-solid fa-eye"></i> <p id="count-view" class="text-primary"></p>
+                            </span>
+                        </div> 
+                            <span>
+                              <button type="button" class="btn btn-secondary ms-5" data-bs-dismiss="modal">Close</button>
+                            </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 </div>
+               </div>
+              </div>
+            </div>      
+          </div>
+       </section>
+       <!-- news display section -->
+       <section class="container">
           <div id="news-item" class=" py-3 ps-4 mb-5 mt-lg-5 fs-5 rounded">
            </div>
        </section>
