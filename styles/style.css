@@ -63,3 +63,13 @@ ul{
     margin-left: 15%;
     margin-right: 15%;
   }
+
+  #blog-card .card{
+    height: 300px;
+  }
+
+  @media screen and (max-width: 900px) {
+    #blog-card .card{
+      height: 100%;
+    }
+  }

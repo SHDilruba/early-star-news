@@ -34,7 +34,72 @@
         </nav>
        </section>
    </header>
+   <main>
+    <section>
+         <h2 class="text-center my-5 pb-lg-3"> Blog about Javascript</h2>
+    </section>
+    <section id="blog-card" class="container px-lg-5 mb-5 pb-5">
+     <div class="row row-cols-1 g-4">
+       <div class="col">
+         <div class="card border-primary p-3 p-md-5 p-lg-5">
+           <div class="card-body">
+             <h5 class="card-title mb-4">What's the difference between let, var and const?</h5>
+             <p class="card-text">
+               Let statement is block-scoped and not a Global scope local variable used for initializing a statement. 
+               This statement can be used in function as it is function-scoped and one of the main character of let
+               statement is that it can be reassigned.
+               Var statement is also used for variable declaration and it is Global scoped variable. 
+               Var is defined throughout the function but not if its declared in a block as it is 
+               not block-scoped.Var statement can be reassigned.
+               Const is quite similar to Let with the only difference that once the variable has been
+               defined then its value cannot be changed. #if the user tries to change the value,
+               they will get an error.                    
+             </p>
+           </div>
+         </div>
+       </div>
+       <div class="col">
+        <div class="card  border-primary p-5">
+          <div class="card-body">
+            <h5 class="card-title mb-4">                   
+                 What's the difference between arrow function and regular function?
+             </h5>
+             <p class="card-text">
+               The first major difference between arrow functions and regular functions is that arrow 
+               functions are always anonymous. They cannot be named.
+               One of the best things about an arrow function is implicit returns. Implicit returns from
+               arrow functions becomes especially useful when working with array methods or callbacks.
+               Whereas a regular function created with the function keyword can be named or anonymous
+               (function myFunc() {... } vs function() { ... }), arrow functions are always anonymous.This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+             </p>
+           </div>
+         </div>
+       </div>
+       <div class="col">
+         <div class="card  border-primary p-5">
+           <div class="card-body">
+             <h5 class="card-title mb-4">
+               What's the difference between forEach, map, filter and find?
+             </h5>
+             <p class="card-text">
+               .forEach(), is used to execute the same code on every element in an array but does not 
+               change the array. It is great when need to execute a function for each individual element in an array.
+               .map() executes the same code on every element in an array and returns a new array with
+               the updated elements.
+               .filter() checks every element in an array to see if it meets a certain criteria and
+               returns a new array with the elements that return truthy for the criteria.
+               When need to select a single element from an array, can be used .find()
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
      <script src="js/index.js"></script>
+     <footer>
+       <p class="text-center my-5 py-5"> copyright reserved  © 2023</p>
+   </footer>
 </body>
 </html>
