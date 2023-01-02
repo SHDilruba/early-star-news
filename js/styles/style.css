@@ -5,3 +5,16 @@
 .nav-link:hover{
  color: blue;
 }
+
+ul{
+  list-style-type: none;
+  }
+
+  #page-list{
+    margin-left: 80%;
+    display: flex;
+  }
+
+  #news-btn{
+    border-bottom: 2px solid blue;       
+    }
