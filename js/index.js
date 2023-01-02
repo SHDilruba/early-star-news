@@ -21,12 +21,13 @@ const loadNewsList = async() =>{
   </li>
   `;
   ulList.appendChild(newsListDisplay)
-  })
+  });
 };
  loadNewsList('');
 
  const loadNews = async(category_id) =>{
   const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
+  toggleSpinner(true);
   try{
     const res = await fetch(url);
     const data = await res.json();
@@ -36,7 +37,6 @@ const loadNewsList = async() =>{
       console.log(error);
   }
 };
-
 //============== news display section ===================
 const displayNews = allNews =>{
   const quantity = document.getElementById('news-item');
@@ -81,11 +81,13 @@ const displayNews = allNews =>{
 `;
 newsDisplayContainer.appendChild(newsDisplay)
 });
+  toggleSpinner(false);
 };
 
 //============== modal section ===================
 const loadNewsDetail = async (news_id) =>{
   const url = `https://openapi.programming-hero.com/api/news/${news_id}`;
+  toggleSpinner(true);
   try{
     const res = await fetch(url);
     const data = await res.json();
@@ -114,5 +116,16 @@ const displayNewsDetails = news =>{
     news.total_view 
   : 
   'no data available'}`;
+   toggleSpinner(false);
+};
+//============== spinner section ===================
+const toggleSpinner = isLoading => {
+  const loaderSection = document.getElementById('loader');
+  if(isLoading){
+     loaderSection.classList.remove('d-none');
+  }
+  else{
+     loaderSection.classList.add('d-none');
+  }
 };
 // loadNewsDetail();
