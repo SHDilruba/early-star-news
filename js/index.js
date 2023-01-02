@@ -35,7 +35,9 @@ const loadNewsList = async() =>{
   catch(error){
       console.log(error);
   }
-}
+};
+
+//============== news display section ===================
 const displayNews = allNews =>{
   const quantity = document.getElementById('news-item');
   quantity.innerText = `${allNews.length ? 
@@ -80,4 +82,37 @@ const displayNews = allNews =>{
 newsDisplayContainer.appendChild(newsDisplay)
 });
 };
-// loadNews();
+
+//============== modal section ===================
+const loadNewsDetail = async (news_id) =>{
+  const url = `https://openapi.programming-hero.com/api/news/${news_id}`;
+  try{
+    const res = await fetch(url);
+    const data = await res.json();
+    displayNewsDetails(data.data[0]);
+  }
+  catch(err){
+      console.log(err);
+  }
+}
+
+const displayNewsDetails = news =>{
+  const modalTitle = document.getElementById('exampleModalLabel');
+  modalTitle.innerText = news.title;
+  const newsCover = document.getElementById('image');
+  newsCover.src = news.image_url;
+  const newsDetails = document.getElementById('newsDetails');
+  newsDetails.innerText = `${news.details.slice(0, 280) + ' ' + '.....'}`;
+  const authorImg = document.getElementById('author-image');
+  authorImg.src = news.author.img;
+  const authorName = document.getElementById('author-name');
+  authorName.innerText = `${news.author.name ? news.author.name : 'name is unavailable'}`;
+  const  publishedDate = document.getElementById('para');
+  publishedDate.innerText = `${news.author.published_date ? news.author.published_date : 'date is unavailable' }`;
+  const countView = document.getElementById('count-view');
+  countView.innerText = `${news.total_view ?
+    news.total_view 
+  : 
+  'no data available'}`;
+};
+// loadNewsDetail();
