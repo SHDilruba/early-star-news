@@ -1,0 +1,7 @@
+#nav-border{
+  border-bottom: 1px solid blue;
+}
+
+.nav-link:hover{
+ color: blue;
+}
